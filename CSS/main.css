@@ -1,0 +1,224 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-selfcare: hsl(43, 84%, 65%);
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  --shadowInsideCard: 0 4px 4px rgba(0,0,0,0.15);
+
+  /*--fontTypo: 'Rubik', sans-serif;*/
+
+  --wImgPerson: calc(24px * 3);
+  --wIcon: 66px;
+}
+
+body {
+  display: block;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 16px;
+  font-size: 18px;
+  background: var(--Very-dark-blue);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+}
+
+.dashboard__user, .dashboard__schedule {
+  grid-column: 1;
+}
+
+.dashboard__schedule {
+  grid-row: 2;
+}
+
+.dashboard__user {
+  grid-row: 1;
+  background: var(--Dark-blue);
+  border-radius: 16px;
+}
+
+/* Dashboard User */
+.user {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  background: var(--Blue);
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: var(--shadowInsideCard);
+}
+
+.iconUser {
+  width: var(--wImgPerson);
+  height: var(--wImgPerson);
+  overflow: hidden;
+  border: 2px solid var(--Pale-Blue);
+  border-radius: 50%;
+}
+
+.iconUser > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoUser h1, .infoUser span {
+  color: var(--Pale-Blue);
+}
+
+.infoUser h1 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.infoUser span {
+  font-weight: 300;
+  font-size: 0.75em;
+}
+
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 24px 16px;
+}
+
+.controls li {
+  color: var(--Desaturated-blue);
+  font-size: .85em;
+  font-weight: 500;
+}
+
+li.active {
+  color: var(--Pale-Blue);
+}
+
+/* Dashboard Schedule */
+.dashboard__schedule {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 24px;
+}
+
+.items {
+  /*outline: 2px solid blue;*/
+  position: relative;
+  flex: 100%;
+  max-width: 100%;
+  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 16px;
+  padding: 48px 0 0 0;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0; right: 16px;
+  width: var(--wIcon);
+  height: var(--wIcon);
+  z-index: 20;
+}
+
+.bgImage > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work {
+  background: var(--Light-red-work);
+}
+
+.play {
+  background: var(--Soft-blue-play);
+}
+
+.study {
+  background: var(--Light-red-study);
+}
+
+.exercise {
+  background: var(--Lime-green-exercise);
+}
+
+.social {
+  background: var(--Violet-social);
+}
+
+.selfCare {
+  background: var(--Soft-orange-selfcare);
+}
+
+.items--down {
+  position: relative;
+  background: var(--Dark-blue);
+  padding: 16px;
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  z-index: 40;
+}
+
+.items--down span, .items--down i, .items--down h1, .items--down h6 {
+  color: var(--Pale-Blue);
+}
+
+.items--down span {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85em;
+  margin: 0 0 8px 0;
+}
+
+.content-time {
+  /*outline: 2px solid blue;*/
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content-time h1 {
+  justify-self: flex-start;
+  font-weight: 400;
+  font-size: 1.65em;
+}
+
+.content-time h6 {
+  justify-self: flex-end;
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  font-size: 0.75em;
+}
+
+.bx-dots-horizontal-rounded {
+  position: absolute;
+  top: 16px; right: 16px;
+}
