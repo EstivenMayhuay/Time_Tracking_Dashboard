@@ -112,6 +112,7 @@ body {
   color: var(--Desaturated-blue);
   font-size: .85em;
   font-weight: 500;
+  cursor: pointer;
 }
 
 li.active {
@@ -189,6 +190,16 @@ li.active {
   color: var(--Pale-Blue);
 }
 
+.items--down i {
+  font-size: 28px;
+  transition: all .4s ease;
+}
+
+.items--down  i:hover {
+  cursor: pointer;
+  color: white;
+}
+
 .items--down span {
   display: block;
   font-weight: 700;
@@ -221,4 +232,144 @@ li.active {
 .bx-dots-horizontal-rounded {
   position: absolute;
   top: 16px; right: 16px;
+}
+
+br {
+  display: none;
+}
+
+/* Breakpoints */
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard {
+    width: 100%;
+  }
+
+  .dashboard__schedule {
+    flex-flow:  row wrap;
+  }
+
+  .items {
+    flex: calc(50% - 24px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .items {
+    flex: calc(33% - 24px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  br {
+    display: block;
+  }
+
+  body {
+    padding: 24px 0 24px 36px;
+  }
+
+  .dashboard {
+    /*outline: 2px solid blue;*/
+    width: auto;
+    height: 560px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+  }
+
+  .dashboard__user {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .dashboard__schedule {
+    grid-column: 2;
+    grid-row: 1;
+    flex-flow: row wrap;
+  }
+
+  /* Dashboard User */
+  .user {
+    flex: 70%;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .iconUser {
+    width: calc(var(--wImgPerson) + 10px);
+    height: calc(var(--wImgPerson) + 10px);
+  }
+
+  .infoUser span {
+    font-size: 0.85em;
+  }
+
+  .infoUser h1 {
+    font-size: 2em;
+  }
+
+  .controls {
+    flex: 30%;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .controls > li {
+    font-size: 0.95em;
+  }
+
+  /* Dashboard Schedule */
+  .items {
+    flex: 30%;
+    max-width: 30%;
+    overflow: hidden;
+  }
+
+  .items--down {
+    height: 100%;
+    padding: 24px;
+  }
+
+  .items--down span {
+    margin: 0 0 0 0;
+    font-size: 0.95em;
+  }
+
+  .content-time {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .content-time h1 {
+    font-size: 3em;
+  }
+
+  .content-time h6 {
+    font-size: 0.8em;
+  }
+
+  .bgImage > img {
+    overflow: hidden;
+    transition: all .4s ease;
+  }
+
+  .bgImage:hover > img {
+    transform: scale(0.75) rotate(360deg);
+  }
 }
