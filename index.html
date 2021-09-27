@@ -26,86 +26,87 @@
         </div>
       </div>
       <ul class="controls">
-        <li>Daily</li>
-        <li class="active">Weekly</li>
-        <li>Monthly</li>
+        <li class="btnTime" data-time="daily">Daily</li>
+        <li class="btnTime active" data-time="weekly">Weekly</li>
+        <li class="btnTime" data-time="monthly">Monthly</li>
       </ul>
     </div>
 
     <div class="dashboard__schedule">
-      <div class="items work">
+      <div class="items work" data-name="Work">
         <p class="bgImage"><img src="./images/icon-work.svg" alt="work image"></p>
         <div class="items--down">
           <span>Work</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">32hrs</h1>
-            <h6>Last Week - 36hrs</h6>
+            <h6 class="timePrevious">Last Week - 36hrs</h6>
           </div>
         </div>
       </div>
 
-      <div class="items play">
+      <div class="items play" data-name="Play">
         <p class="bgImage"><img src="./images/icon-play.svg" alt="play image"></p>
         <div class="items--down">
           <span>Play</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">10hrs</h1>
-            <h6>Last Week - 8hrs</h6>
+            <h6 class="timePrevious">Last Week - 8hrs</h6>
           </div>
         </div>
       </div>
 
-      <div class="items study">
+      <div class="items study" data-name="Study">
         <p class="bgImage"><img src="./images/icon-study.svg" alt="study image"></p>
         <div class="items--down">
           <span>Study</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">4hrs</h1>
-            <h6>Last Week - 7hrs</h6>
+            <h6 class="timePrevious">Last Week - 7hrs</h6>
           </div>
         </div>
       </div>
 
-      <div class="items exercise">
+      <div class="items exercise" data-name="Exercise">
         <p class="bgImage"><img src="./images/icon-exercise.svg" alt="exercise image"></p>
         <div class="items--down">
           <span>Exercise</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">4hrs</h1>
-            <h6>Last Week - 5hrs</h6>
+            <h6 class="timePrevious">Last Week - 5hrs</h6>
           </div>
         </div>
       </div>
 
-      <div class="items social">
+      <div class="items social" data-name="Social">
         <p class="bgImage"><img src="./images/icon-social.svg" alt="social image"></p>
         <div class="items--down">
           <span>Social</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">5hrs</h1>
-            <h6>Last Week - 10hrs</h6>
+            <h6 class="timePrevious">Last Week - 10hrs</h6>
           </div>
         </div>
       </div>
 
-      <div class="items selfCare">
+      <div class="items selfCare" data-name="Self Care">
         <p class="bgImage"><img src="./images/icon-self-care.svg" alt="selfCare image"></p>
         <div class="items--down">
           <span>Self Care</span>
           <i class='bx bx-dots-horizontal-rounded' ></i>
           <div class="content-time">
             <h1 class="timeCurrent">2hrs</h1>
-            <h6>Last Week - 2hrs</h6>
+            <h6 class="timePrevious">Last Week - 2hrs</h6>
           </div>
         </div>
       </div>
-
     </div>
   </div>
+
+  <script src="./script/app.js"></script>
 </body>
 </html>
