@@ -2,6 +2,7 @@ const log = console.log;
 
 $items = Array.from(document.querySelectorAll('.items'));
 $btnTime = Array.from(document.querySelectorAll('.btnTime'));
+$btnList = Array.from(document.querySelectorAll('.btnTime'));
 
 async function obtainData () {
   const response = await fetch('http://127.0.0.1:5500/data.json'),
@@ -35,8 +36,6 @@ async function changeTime (e) {
     else if(dataTimeBtn == "monthly") objectTime.push(obj.timeframes.monthly);
   });
 
-  log(objectTime);
-
   // show int the DOM The time
   renderTime(objectTime);
 }
@@ -44,3 +43,14 @@ async function changeTime (e) {
 $btnTime.forEach(btn => {
   btn.addEventListener('click', changeTime);
 });
+
+$btnTime.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // reset active buttons
+    document.querySelectorAll('li.active').forEach( listActive => {
+      listActive.classList.remove('active');
+    });
+
+    btn.classList.add('active');
+  });
+})
