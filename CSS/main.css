@@ -111,7 +111,7 @@ body {
 .controls li {
   color: var(--Desaturated-blue);
   font-size: .85em;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
