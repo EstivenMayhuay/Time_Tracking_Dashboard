@@ -4,7 +4,7 @@ This is a responsive dashboard that time tracking ***(Study, Play, Work, etc)***
 
 ## **Link**
 
-- [https://estivenm99.github.io/Time_Tracking_Dashboard/](https://estivenm99.github.io/Time_Tracking_Dashboard/)
+- [https://estivenmayhuay.github.io/Time_Tracking_Dashboard/](https://estivenmayhuay.github.io/Time_Tracking_Dashboard/)
 
 ## **Technologies**
 
