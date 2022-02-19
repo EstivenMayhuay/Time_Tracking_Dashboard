@@ -1,4 +1,5 @@
 const log = console.log;
+const urlData = "https://estivenmayhuay.github.io/Time_Tracking_Dashboard/data.json"
 
 $items = Array.from(document.querySelectorAll('.items'));
 $btnTime = Array.from(document.querySelectorAll('.btnTime'));
@@ -8,7 +9,7 @@ $btnList = Array.from(document.querySelectorAll('.btnTime'));
 // that link is for url github -> https://estivenmayhuay.github.io/Time_Tracking_Dashboard/data.json
 
 async function obtainData () {
-  const response = await fetch('https://estivenmayhuay.github.io/Time_Tracking_Dashboard/data.json'),
+  const response = await fetch(urlData),
         json = await response.json();
 
   return json;
