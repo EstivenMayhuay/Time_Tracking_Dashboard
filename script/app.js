@@ -5,10 +5,10 @@ $btnTime = Array.from(document.querySelectorAll('.btnTime'));
 $btnList = Array.from(document.querySelectorAll('.btnTime'));
 
 // that link is for localhost -> http://127.0.0.1:5500/data.json
-// that link is for url github -> https://estivenm99.github.io/Time_Tracking_Dashboard/data.json
+// that link is for url github -> https://estivenmayhuay.github.io/Time_Tracking_Dashboard/data.json
 
 async function obtainData () {
-  const response = await fetch('https://estivenm99.github.io/Time_Tracking_Dashboard/data.json'),
+  const response = await fetch('https://estivenmayhuay.github.io/Time_Tracking_Dashboard/data.json'),
         json = await response.json();
 
   return json;
